@@ -1,10 +1,10 @@
-name: Docker Image CI 
+name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -24,14 +24,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: List directory contents 
-      run: |
-        ls -alh
-        ls -alh Calculator-GitHubActions-
+      run: ls -alh
 
     - name: Build the Docker image
-      run: |
-        docker build -f Dockerfile -t hauro/dockerCalculator:${{ github.sha }} .
+      run: docker build -f Dockerfile -t hauro/dockercalculator:${{ github.sha }} .
 
     - name: Push Docker image
-      run: |
-        docker push hauro/dockerCalculator:${{ github.sha }}
+      run: docker push hauro/dockercalculator:${{ github.sha }}
