@@ -13,7 +13,7 @@ WORKDIR /app/Calculator(GitHubActions)
 # Restore any dependencies (e.g., NuGet packages) using the .csproj file
 RUN dotnet restore ./Calculator(GitHubActions).csproj
 
-# Build the application using the .csproj file
+# Build the application using the .csproj filez
 RUN dotnet build ./Calculator(GitHubActions).csproj --configuration Release --output /app/build
 
 # Use the official .NET 8.0 runtime image to run the app
