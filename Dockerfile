@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 # Sætter working dir til /app
 WORKDIR /app
 
-# Copy the MultiThreadServer directory into the working directory
-COPY Calculator(GitHubActions)/ ./Calculator(GitHubActions)
+# Copy the Calculator(GitHubActions) directory into the working directory
+COPY Calculator(GitHubActions)/ .Calculator(GitHubActions)
 
 # Change to the directory containing your main .csproj file
 WORKDIR /app/Calculator(GitHubActions)
