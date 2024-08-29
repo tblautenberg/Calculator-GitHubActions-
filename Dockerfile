@@ -1,7 +1,7 @@
 # Official Microsoft .NET build image with .NET 8.0
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
-# Set the working directory to /app
+# Set the working directory to /app 
 WORKDIR /app
 
 # Copy the entire repository to the working directory in the container
