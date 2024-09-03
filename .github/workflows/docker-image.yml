@@ -27,7 +27,7 @@ jobs:
       run: ls -alh
 
     - name: Build the Docker image
-      run: docker build -f Dockerfile -t hauro/dockercalculator:latest
+      run: docker build -f Dockerfile -t hauro/dockercalculator:${{ github.sha }} .
 
     - name: Push Docker image
-      run: docker push hauro/dockercalculator:latest
+      run: docker push hauro/dockercalculator:${{ github.sha }} .
