@@ -30,4 +30,4 @@ jobs:
       run: docker build -f Dockerfile -t hauro/dockercalculator:${{ github.sha }} .
 
     - name: Push Docker image
-      run: docker push hauro/dockercalculator:${{ github.sha }} .
+      run: docker push hauro/dockercalculator:${{ github.sha }}
